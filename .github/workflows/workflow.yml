@@ -9,6 +9,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run Python script
       env:
-        MY_SECRET: ${{ secrets.MY_SECRET }}
+        MY_SECRET: ${{ secrets.TESTKEY }}
       run: |
-        python3 your_script.py
+        python3 nameofscripthere.py
