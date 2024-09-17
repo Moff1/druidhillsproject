@@ -1,0 +1,14 @@
+name: Example workflow
+
+on: [push]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Python script
+      env:
+        MY_SECRET: ${{ secrets.MY_SECRET }}
+      run: |
+        python3 your_script.py
